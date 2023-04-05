@@ -14,8 +14,8 @@ inquirer.prompt([
     },
     {
       type: 'input',
-      message: 'Re-enter password to confirm:',
-      name: 'usage',
+      message: 'Installation?',
+      name: 'instal',
     },
     {
       type: 'input',
@@ -25,12 +25,12 @@ inquirer.prompt([
     {
       type: 'input',
       message: 'Please enter name of licence to be used (ex: MIT, Microsoft Public License, Mozilla, ect.)',
-      name: 'licence',
+      name: 'license',
     },
     {
       type: 'input',
       message: 'What are the instructions to run a test',
-      name: 'test',
+      name: 'tests',
     },
     {
       type: 'input',
@@ -43,7 +43,7 @@ inquirer.prompt([
       name: 'email',
     },
     {
-      type: 'list',
+      type: 'input',
       message: 'Example of how to use you project',
       name: 'usage',
     },
@@ -83,7 +83,7 @@ function template(data) {
   - [Questions](#questions)
   
   ## Installation
-  ${data.installation}
+  ${data.instal}
   
   ## License and Usage
   License: ${data.license}
@@ -97,8 +97,8 @@ function template(data) {
   
   ## Questions
   For more questions please contact below: 
-  Email:${data.email} 
-  GitHub: ${data.github}.`;
+  Email: ${data.email} 
+  GitHub: ${data.github}`;
 };
 
 // .then((answers) => {
