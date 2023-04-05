@@ -5,7 +5,7 @@ inquirer.prompt([
     {
       type: 'input',
       message: 'What is the title of the project?',
-      name: 'titleofProject',
+      name: 'title',
     },
     {
       type: 'input',
@@ -14,8 +14,8 @@ inquirer.prompt([
     },
     {
       type: 'input',
-      message: 'what are the steps to install this app',
-      name: 'installation',
+      message: 'Re-enter password to confirm:',
+      name: 'usage',
     },
     {
       type: 'input',
@@ -24,7 +24,7 @@ inquirer.prompt([
     },
     {
       type: 'input',
-      message: 'Please enter name of licence to be used',
+      message: 'Please enter name of licence to be used (ex: MIT, Microsoft Public License, Mozilla, ect.)',
       name: 'licence',
     },
     {
@@ -39,9 +39,10 @@ inquirer.prompt([
     },
     {
       type: 'input',
-      message: 'Re-enter password to confirm:',
+      message: 'Please type in your email',
       name: 'email',
-    },{
+    },
+    {
       type: 'list',
       message: 'Example of how to use you project',
       name: 'usage',
@@ -59,12 +60,20 @@ inquirer.prompt([
     );
 });
 
+// .then((answers) => {
+//   console.log(answers);
+
+// fs.writeFile('README.md', README, (error =>
+//         error)
+  
+
 // funtion that takes the data parameter to inject the answers in proper area using back ticks (template literals)
 function template(data) {
-  return `# ${data.titleofProject}
-  ${data.license}
+  return `# ${data.title}
+  
   ## Description
   ${data.description}
+  
   ## Table of Contents
   - [Installation](#installation)
   - [Usage](#usage)
@@ -72,15 +81,20 @@ function template(data) {
   - [License](#license)
   - [Tests](#tests)
   - [Questions](#questions)
+  
   ## Installation
   ${data.installation}
-  ## Usage
-  ${data.usage}
-  ${data.license}
+  
+  ## License and Usage
+  License: ${data.license}
+  Usage: ${data.usage}
+  
   ## Contributing
   ${data.credits}
+  
   ## Tests
   ${data.tests}
+  
   ## Questions
   For more questions please contact below: 
   Email:${data.email} 
