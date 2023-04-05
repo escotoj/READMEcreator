@@ -14,7 +14,7 @@ inquirer.prompt([
     },
     {
       type: 'input',
-      message: 'Installation?',
+      message: 'What do we need to for the installation of this project?',
       name: 'instal',
     },
     {
