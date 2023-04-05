@@ -1,31 +1,30 @@
-# README GEN
+# READMEGEN
   
   ## Description
-  to create a pro readme file
+  to create a command line app that will render a pro README file
   
   ## Table of Contents
-  - [Installation](#installation)
-  - [Contributing](#Contributing)
-  - [License](#license)
-  - [Tests](#tests)
-  - [Questions](#questions)
+  - [Installation](#Installation)
+  - [Credits](#Credits)
+  - [License](#License)
+  - [Contribute](#Contribute)
+  - [Questions](#Questions)
   
   ## Installation
-  nodejs and node modules liek inquire
+  node.js and you need inquierer
   
   ## License
-  License: MIT 
-  Usage: this video will be an example of how to use
-  [Functionality Video](https://drive.google.com/file/d/1SI487J7uxI3aulypkBFqlW8zgSTq0RKi/view)
-
+  License: Mozilla
+  Usage: this video will be an example
+   [Functionality Video](https://drive.google.com/file/d/1d8D6xatXV4n0V-omAop8MQRPTvfL1Fi5/view)
   
-  ## Contributing
+  ## Credits
   Jose Escoto
   
-  ## Tests
-  instal node.js and inquirer and use terminal
+  ## Contribute to Project
+  maybe add some links
   
   ## Questions
   For more questions please contact below: 
-  Email: j.escoto14@gmail.com 
+  Email: j.escoto@gmail.com 
   GitHub: escotoj

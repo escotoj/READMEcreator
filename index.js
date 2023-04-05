@@ -9,7 +9,7 @@ inquirer.prompt([
     },
     {
       type: 'input',
-      message: 'Please descrive your project and its purpose?',
+      message: 'Please describe your project and its purpose?',
       name: 'description',
     },
     {
@@ -24,8 +24,8 @@ inquirer.prompt([
     },
     {
       type: 'input',
-      message: 'What are the instructions to run a test',
-      name: 'tests',
+      message: 'If you would like to contribute or have any feedback to the project, please enter here',
+      name: 'contribute',
     },
     {
       type: 'input',
@@ -75,11 +75,11 @@ function template(data) {
   ${data.description}
   
   ## Table of Contents
-  - [Installation](#installation)
-  - [Contributing](#Contributing)
-  - [License](#license)
-  - [Tests](#tests)
-  - [Questions](#questions)
+  - [Installation](#Installation)
+  - [Credits](#Credits)
+  - [License](#License)
+  - [Contribute](#Contribute)
+  - [Questions](#Questions)
   
   ## Installation
   ${data.instal}
@@ -88,11 +88,11 @@ function template(data) {
   License: ${data.license}
   Usage: ${data.usage}
   
-  ## Contributing
+  ## Credits
   ${data.credits}
   
-  ## Tests
-  ${data.tests}
+  ## Contribute to Project
+  ${data.contribute}
   
   ## Questions
   For more questions please contact below: 
