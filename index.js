@@ -1,7 +1,7 @@
 const inquirer = require('inquirer');
 const fs = require('fs')
 
-const q = [
+inquirer.prompt([
     {
       type: 'input',
       message: 'What is the title of the project?',
@@ -51,5 +51,17 @@ const q = [
       message: 'List the features in this project',
       name: 'features',
     },
-  ];
+  ]).then((answers) => {
+    console.log(answers);
+    const README = template(answers); // create function for template 
+    fs.writeFile('README.md', README, error =>
+        error
+    );
+});
 
+// .then((answers) => {
+//   console.log(answers);
+
+// fs.writeFile('README.md', README, (error =>
+//         error)
+  
