@@ -14,33 +14,18 @@ inquirer.prompt([
     },
     {
       type: 'input',
+      message: 'Please enter name of license to be used (ex: MIT, Microsoft Public License, Mozilla, ect.)',
+      name: 'license',
+    },
+    {
+      type: 'input',
       message: 'What do we need to for the installation of this project?',
       name: 'instal',
     },
     {
       type: 'input',
-      message: 'Please list contributors to this app to give credits',
-      name: 'credits',
-    },
-    {
-      type: 'input',
-      message: 'Please enter name of licence to be used (ex: MIT, Microsoft Public License, Mozilla, ect.)',
-      name: 'license',
-    },
-    {
-      type: 'input',
       message: 'What are the instructions to run a test',
       name: 'tests',
-    },
-    {
-      type: 'input',
-      message: 'Please type in your GitHub username',
-      name: 'github',
-    },
-    {
-      type: 'input',
-      message: 'Please type in your email',
-      name: 'email',
     },
     {
       type: 'input',
@@ -51,6 +36,21 @@ inquirer.prompt([
       type: 'input',
       message: 'List the features in this project',
       name: 'features',
+    },
+    {
+      type: 'input',
+      message: 'Please list contributors to this app to give credits',
+      name: 'credits',
+    },
+    {
+      type: 'input',
+      message: 'What is your GitHub username',
+      name: 'github',
+    },
+    {
+      type: 'input',
+      message: 'Please enter in your email',
+      name: 'email',
     },
   ]).then((answers) => {
     console.log(answers);
@@ -76,8 +76,7 @@ function template(data) {
   
   ## Table of Contents
   - [Installation](#installation)
-  - [Usage](#usage)
-  - [Contributing](#credits)
+  - [Contributing](#Contributing)
   - [License](#license)
   - [Tests](#tests)
   - [Questions](#questions)
@@ -85,7 +84,7 @@ function template(data) {
   ## Installation
   ${data.instal}
   
-  ## License and Usage
+  ## License
   License: ${data.license}
   Usage: ${data.usage}
   
